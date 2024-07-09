@@ -1,0 +1,27 @@
+[[protocols]]
+name = "custom_remote"
+protocol = "nec"
+variant = "nec"
+
+# Define default key mappings for all contexts
+[protocols.scancodes]
+0x87ee580a = "KEY_UP"
+0x87ee580c = "KEY_DOWN"
+0x87ee5806 = "KEY_RIGHT"
+0x87ee5809 = "KEY_LEFT"
+0x87ee5803 = "KEY_BACK"
+0x87ee5805 = "KEY_ENTER"
+
+# Key mappings specific to live TV (seeking functionality)
+[protocols.live_tv]
+0x87ee5806 = "KEY_FORWARD"   # Replace with the actual key for seeking forward in Kodi
+0x87ee5809 = "KEY_REWIND"    # Replace with the actual key for seeking backward in Kodi
+
+# Key mappings for volume control in other contexts and live TV
+[protocols.volume_control]
+0x87ee5806 = "KEY_VOLUMEUP"
+0x87ee5809 = "KEY_VOLUMEDOWN"
+
+# Key mappings for favorite toggle in all contexts
+[protocols.favorite_toggle]
+0x87ee5803 = "KEY_FAVORITES"  # Replace with the actual key for toggling favorites in Kodi
